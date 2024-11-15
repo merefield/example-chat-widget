@@ -3,7 +3,7 @@ import { Widget } from "./Widget";
 import { nanoid } from "nanoid";
 import {useChat} from "./ChatProvider";
 
-export const WidgetContainer = ({license = "", greeting = ""}) => {
+export const WidgetContainer = ({license = "", greeting = "hello there!"}) => {
 
     const {messages, sendMessage} = useChat();
 
@@ -16,7 +16,7 @@ export const WidgetContainer = ({license = "", greeting = ""}) => {
                 direction: "incoming",
             });
         }
-    },[greeting, messages]);
+    },[greeting, messages, sendMessage]);
 
     const remoteName = useMemo( () => {
         if ( license === "123" ) {
@@ -28,25 +28,22 @@ export const WidgetContainer = ({license = "", greeting = ""}) => {
         }
     },[license]);
 
-    const handleSend = (message) => {
-        const newMessages = [
+    const handleSend = async (message) => {
+        let newMessages = [
             {
                 _id: nanoid(),
-                message,
+                message: message,
                 sender: "me",
                 direction: "outgoing",
-            },
-            {
-                _id: nanoid(),
-                message: `ECHO: ${message}`,
-                sender: "remote",
-                direction: "incoming",
             }
         ];
+
         sendMessage(newMessages);
     };
 
     return <Widget remoteName={remoteName} messages={messages} onSend={handleSend} />
 
 };
+
+
 
