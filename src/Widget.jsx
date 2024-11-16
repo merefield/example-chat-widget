@@ -1,9 +1,9 @@
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer, ChatContainer, ConversationHeader, MessageList, Message,
-MessageInput, Button } from "chat-ui-kit-react";
+MessageInput, Button, TypingIndicator } from "chat-ui-kit-react";
 import { useChat } from "./ChatProvider";
 
-export const Widget = ({remoteName = "", messages = [], onSend}) => {
+export const Widget = ({remoteName = "", messages = [], typingMessage = "", onSend}) => {
     
     const { hide } = useChat();
     
@@ -20,7 +20,7 @@ export const Widget = ({remoteName = "", messages = [], onSend}) => {
                 {messages.map( message =>
                     <Message key={message._id} model={message} />
                 )}
-    
+                {typingMessage && <TypingIndicator content={typingMessage} />}
             </MessageList>
     
             <MessageInput placeholder="Type message here"

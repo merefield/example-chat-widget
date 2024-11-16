@@ -5,7 +5,7 @@ import {useChat} from "./ChatProvider";
 
 export const WidgetContainer = ({license = "", greeting = "hello there!"}) => {
 
-    const {messages, sendMessage} = useChat();
+    const {messages, sendMessage, typingMessage } = useChat();
 
     useEffect( () => {
         if ( greeting && messages.length === 0 ) {
@@ -41,7 +41,7 @@ export const WidgetContainer = ({license = "", greeting = "hello there!"}) => {
         sendMessage(newMessages);
     };
 
-    return <Widget remoteName={remoteName} messages={messages} onSend={handleSend} />
+    return <Widget remoteName={remoteName} messages={messages} typingMessage={typingMessage} onSend={handleSend} />
 
 };
 

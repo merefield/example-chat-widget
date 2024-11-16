@@ -7,6 +7,7 @@ const ChatContext = createContext();
 export const ChatProvider = ({children}) => {
     
     const [messages, setMessages] = useState([]);
+    const [typingMessage, setTypingMessage] = useState("");
 
     const openaiApiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
@@ -25,6 +26,7 @@ export const ChatProvider = ({children}) => {
     const sendMessage = async (message) => {
 
         setMessages(messages.concat(message));
+        setTypingMessage("Assistant is typing");
 
         let result = await llmResponse(messages.concat(message).map(((message) => {
             if (message.direction === "incoming") {
@@ -41,7 +43,7 @@ export const ChatProvider = ({children}) => {
                 sender: "remote",
                 direction: "incoming",
             }
-
+        setTypingMessage("");
         setMessages(messages.concat(message).concat(newMessage));
     }
 
@@ -52,6 +54,7 @@ export const ChatProvider = ({children}) => {
     return <ChatContext.Provider value={{
         messages,
         sendMessage,
+        typingMessage,
         hide
     }}>{children}</ChatContext.Provider>
     
