@@ -5,6 +5,26 @@ html, body {
   padding: 0;
 }
 
+.chat-wrapper {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+  height: 647px;
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.chat-frame {
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 #my-widget {
   height: 100%;
   position: relative;

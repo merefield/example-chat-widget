@@ -7,12 +7,12 @@ import {ChatProvider} from "./ChatProvider";
 import {IFrameComponent} from "./iframe";
 import {WrapperComponent} from "./wrapper";
 
-const root = ReactDOM.createRoot(document.getElementById('app'));
+const root = ReactDOM.createRoot(document.getElementById('widget-outlet'));
 root.render(
   <React.StrictMode>
     <WrapperComponent>
       <IFrameComponent className="chat-frame" title="Chat Widget">
-      <link href="https://merefield.github.io/example-chat-widget/index.25a5c776.css" rel="stylesheet" />
+        <link href="https://merefield.github.io/example-chat-widget/index.25a5c776.css" rel="stylesheet" />
         <ChatProvider>
           <App />
         </ChatProvider>

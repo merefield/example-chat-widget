@@ -9,6 +9,7 @@ export const IFrameComponent = ({
   const [contentRef, setContentRef] = useState(null)
   const mountNode =
     contentRef?.contentWindow?.document?.body
+    debugger;
 
   return (
     <iframe title={title} {...props} ref={setContentRef}>
