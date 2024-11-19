@@ -2938,31 +2938,30 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _client = require("react-dom/client");
+var _clientDefault = parcelHelpers.interopDefault(_client);
 var _indexCss = require("./index.css");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
 var _reportWebVitals = require("./reportWebVitals");
 var _reportWebVitalsDefault = parcelHelpers.interopDefault(_reportWebVitals);
 var _chatProvider = require("./ChatProvider");
-// const root = ReactDOM.createRoot(document.getElementById('app'));
-// root.render(
-(0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
+const root = (0, _clientDefault.default).createRoot(document.getElementById('widget-outlet'));
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatProvider.ChatProvider), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 13,
+            lineNumber: 12,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 12,
+        lineNumber: 11,
         columnNumber: 7
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 11,
+    lineNumber: 10,
     columnNumber: 3
 }, undefined)); // If you want to start measuring performance in your app, pass a function
  // to log results (for example: reportWebVitals(console.log))
@@ -2974,7 +2973,7 @@ var _chatProvider = require("./ChatProvider");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","./index.css":"52dia","./App":"l7i2G","./reportWebVitals":"hPgnD","./ChatProvider":"j9Qkj","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh","react-dom":"hKAbJ"}],"f4wnQ":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","./index.css":"52dia","./App":"l7i2G","./reportWebVitals":"hPgnD","./ChatProvider":"j9Qkj","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh","react-dom/client":"lGLKT"}],"f4wnQ":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -37457,7 +37456,28 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"hKAbJ":[function(require,module,exports,__globalThis) {
+},{}],"lGLKT":[function(require,module,exports,__globalThis) {
+'use strict';
+var m = require("aaccff5d309d9239");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+
+},{"aaccff5d309d9239":"hKAbJ"}],"hKAbJ":[function(require,module,exports,__globalThis) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
