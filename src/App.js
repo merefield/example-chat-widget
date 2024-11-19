@@ -20,7 +20,14 @@ function App() {
   useEffect(() => {
 
     const handleMessage = evt => {
-      if ( "greeting" in evt.data ) {
+      if (evt.data === "hide") {
+        console.log("hide");
+        window.top.postMessage(
+          JSON.stringify({
+            error: false,
+            message: "Hello World"
+          }))
+      } else if ( "greeting" in evt.data ) {
         setGreeting(evt.data.greeting);
       } else if  ( "sendMessage" in evt.data ) {
         sendMessage({
