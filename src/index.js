@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ChatProvider} from "./ChatProvider";
 
-const root = ReactDOM.createRoot(document.getElementById('my-widget'));
+const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
   <React.StrictMode>
       <ChatProvider>
