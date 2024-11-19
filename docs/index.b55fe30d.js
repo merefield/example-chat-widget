@@ -2946,22 +2946,23 @@ var _appDefault = parcelHelpers.interopDefault(_app);
 var _reportWebVitals = require("./reportWebVitals");
 var _reportWebVitalsDefault = parcelHelpers.interopDefault(_reportWebVitals);
 var _chatProvider = require("./ChatProvider");
-const root = (0, _clientDefault.default).createRoot(document.getElementById('app'));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
+// const root = ReactDOM.createRoot(document.getElementById('app'));
+// root.render(
+(0, _clientDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatProvider.ChatProvider), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 7
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 10,
+    lineNumber: 11,
     columnNumber: 3
 }, undefined)); // If you want to start measuring performance in your app, pass a function
  // to log results (for example: reportWebVitals(console.log))

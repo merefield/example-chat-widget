@@ -5,8 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ChatProvider} from "./ChatProvider";
 
-const root = ReactDOM.createRoot(document.getElementById('app'));
-root.render(
+// const root = ReactDOM.createRoot(document.getElementById('app'));
+// root.render(
+ReactDOM.render(
   <React.StrictMode>
       <ChatProvider>
         <App />
