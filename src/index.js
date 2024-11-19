@@ -4,12 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ChatProvider} from "./ChatProvider";
- 
-import { ReactFromModule } from 'chat-ui-kit-react';
 
-console.log(React === ReactFromModule); // true
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('my-widget'));
 root.render(
   <React.StrictMode>
       <ChatProvider>
@@ -21,4 +17,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(console.log);
+// reportWebVitals(console.log);

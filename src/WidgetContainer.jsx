@@ -29,16 +29,15 @@ export const WidgetContainer = ({license = "", greeting = "hello there!"}) => {
     },[license]);
 
     const handleSend = async (message) => {
-        let newMessages = [
+        let newMessage = 
             {
                 _id: nanoid(),
                 message: message,
                 sender: "me",
                 direction: "outgoing",
             }
-        ];
 
-        sendMessage(newMessages);
+        sendMessage(newMessage);
     };
 
     return <Widget remoteName={remoteName} messages={messages} typingMessage={typingMessage} onSend={handleSend} />
