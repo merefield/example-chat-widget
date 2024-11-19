@@ -8,6 +8,7 @@ import {IFrameComponent} from "./iframe";
 import {WrapperComponent} from "./wrapper";
 
 const root = ReactDOM.createRoot(document.getElementById('widget-outlet'));
+console.log("root", root);
 root.render(
   <React.StrictMode>
     <WrapperComponent>
