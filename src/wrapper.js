@@ -12,15 +12,15 @@ export const WrapperComponent = ({
     const handler = event => {
       // debugger;
       const data = event.data
-      debugger;
+      // debugger;
       if (data === "hide") {
         setIsMinimised(true);
       }
       if (isMinimised) {
-        className = "chat-wrapper hidden";
+        // className = "chat-wrapper hidden";
         console.log("hidden ", data)
       } else {
-        className = "chat-wrapper";
+        // className = "chat-wrapper";
       }
     }
 
@@ -31,7 +31,7 @@ export const WrapperComponent = ({
     }, []) 
 
   return (
-    <div className={className}>
+    <div className={isMinimised ? 'chat-wrapper hidden' : 'chat-wrapper'}>
       {children}
     </div>
   )

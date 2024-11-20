@@ -2949,7 +2949,7 @@ var _chatProvider = require("./ChatProvider");
 var _iframe = require("./iframe");
 var _wrapper = require("./wrapper");
 const root = (0, _clientDefault.default).createRoot(document.getElementById('widget-outlet'));
-debugger;
+// debugger;
 console.log("root", root);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wrapper.WrapperComponent), {
@@ -27274,7 +27274,7 @@ function App() {
     (0, _react.useEffect)(()=>{
         const handleMessage = (evt)=>{
             if (evt.data === "hide") {
-                debugger;
+                // debugger;
                 console.log("hiding, sending message to parent");
                 window.top.postMessage(JSON.stringify({
                     error: false,
@@ -59077,19 +59077,17 @@ const WrapperComponent = ({ children, ...props })=>{
         const handler = (event)=>{
             // debugger;
             const data = event.data;
-            debugger;
+            // debugger;
             if (data === "hide") setIsMinimised(true);
-            if (isMinimised) {
-                className = "chat-wrapper hidden";
-                console.log("hidden ", data);
-            } else className = "chat-wrapper";
+            if (isMinimised) // className = "chat-wrapper hidden";
+            console.log("hidden ", data);
         };
         window.addEventListener("message", handler);
         // clean up
         return ()=>window.removeEventListener("message", handler);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: className,
+        className: isMinimised ? 'chat-wrapper hidden' : 'chat-wrapper',
         children: children
     }, void 0, false, {
         fileName: "src/wrapper.js",

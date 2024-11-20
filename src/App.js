@@ -21,7 +21,7 @@ function App() {
 
     const handleMessage = evt => {
       if (evt.data === "hide") {
-        debugger;
+        // debugger;
         console.log("hiding, sending message to parent");
         window.top.postMessage(
           JSON.stringify({
