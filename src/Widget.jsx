@@ -1,4 +1,4 @@
-// import "chat-ui-kit-styles/docs/default/styles.min.css";
+import "chat-ui-kit-styles/docs/default/styles.min.css";
 import { MainContainer, ChatContainer, ConversationHeader, MessageList, Message,
 MessageInput, Button, TypingIndicator } from "chat-ui-kit-react";
 import { useChat } from "./ChatProvider";

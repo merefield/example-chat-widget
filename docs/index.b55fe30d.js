@@ -27395,11 +27395,11 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$e604.prelude(module);
 
 try {
-// import "chat-ui-kit-styles/docs/default/styles.min.css";
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Widget", ()=>Widget);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _stylesMinCss = require("chat-ui-kit-styles/docs/default/styles.min.css");
 var _chatUiKitReact = require("chat-ui-kit-react");
 var _chatProvider = require("./ChatProvider");
 var _s = $RefreshSig$();
@@ -27496,7 +27496,7 @@ $RefreshReg$(_c, "Widget");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"f4wnQ","chat-ui-kit-react":"5ndbQ","./ChatProvider":"j9Qkj","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}],"5ndbQ":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"f4wnQ","chat-ui-kit-styles/docs/default/styles.min.css":"ddBED","chat-ui-kit-react":"5ndbQ","./ChatProvider":"j9Qkj","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}],"ddBED":[function() {},{}],"5ndbQ":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Avatar", ()=>(0, _avatarDefault.default));
