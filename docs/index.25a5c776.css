@@ -1,4 +1,5 @@
 .chat-wrapper {
+  z-index: 9999;
   box-sizing: border-box;
   -o-transition: width .3s ease-in-out;
   -o-transition: height .3s ease-in-out;
