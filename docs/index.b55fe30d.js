@@ -59032,7 +59032,7 @@ const IFrameComponent = ({ children, title, ...props })=>{
     _s();
     const [contentRef, setContentRef] = (0, _react.useState)(null);
     const mountNode = contentRef?.contentWindow?.document?.body;
-    debugger;
+    // debugger;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
         title: title,
         ...props,
