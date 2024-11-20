@@ -15,16 +15,21 @@ html, body {
   position: absolute;
   top: 40px;
   right: 40px;
-  z-index: 9999;
-  background-color: #fff;
-}
 
-.chat-frame {
-  width: 500px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
+  & .chat-frame {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &.minimised {
+    & .chat-frame {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 #my-widget {

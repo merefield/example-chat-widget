@@ -15,12 +15,20 @@ html, body {
   border: 1px solid #ccc;
   border-radius: 5px;
   display: block;
+
+  .chat-frame {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &.minimised {
+    .chat-frame {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
-.chat-frame {
-  width: 500px;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-}

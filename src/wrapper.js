@@ -1,14 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const WrapperComponent = ({
   children,
   ...props
 }) => {
+
+  const [isMinimised, setIsMinimised] = useState(false);
+  let className = "chat-wrapper";
+
   useEffect(() => {
     const handler = event => {
       // debugger;
       const data = event.data
-      console.log("Hello World?", data)
+      debugger;
+      if (data === "hide") {
+        setIsMinimised(true);
+      }
+      if (isMinimised) {
+        className = "chat-wrapper hidden";
+        console.log("hidden ", data)
+      } else {
+        className = "chat-wrapper";
+      }
     }
 
     window.addEventListener("message", handler)
@@ -18,7 +31,7 @@ export const WrapperComponent = ({
     }, []) 
 
   return (
-    <div className="chat-wrapper">
+    <div className={className}>
       {children}
     </div>
   )

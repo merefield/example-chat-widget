@@ -21,11 +21,12 @@ function App() {
 
     const handleMessage = evt => {
       if (evt.data === "hide") {
-        console.log("hide");
+        debugger;
+        console.log("hiding, sending message to parent");
         window.top.postMessage(
           JSON.stringify({
             error: false,
-            message: "Hello World"
+            message: "hide"
           }))
       } else if ( "greeting" in evt.data ) {
         setGreeting(evt.data.greeting);

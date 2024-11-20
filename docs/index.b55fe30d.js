@@ -2949,6 +2949,7 @@ var _chatProvider = require("./ChatProvider");
 var _iframe = require("./iframe");
 var _wrapper = require("./wrapper");
 const root = (0, _clientDefault.default).createRoot(document.getElementById('widget-outlet'));
+debugger;
 console.log("root", root);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wrapper.WrapperComponent), {
@@ -2961,34 +2962,34 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).
                     rel: "stylesheet"
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatProvider.ChatProvider), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 18,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/index.js",
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 13,
+    lineNumber: 14,
     columnNumber: 3
 }, undefined)); // If you want to start measuring performance in your app, pass a function
  // to log results (for example: reportWebVitals(console.log))
@@ -27273,10 +27274,11 @@ function App() {
     (0, _react.useEffect)(()=>{
         const handleMessage = (evt)=>{
             if (evt.data === "hide") {
-                console.log("hide");
+                debugger;
+                console.log("hiding, sending message to parent");
                 window.top.postMessage(JSON.stringify({
                     error: false,
-                    message: "Hello World"
+                    message: "hide"
                 }));
             } else if ("greeting" in evt.data) setGreeting(evt.data.greeting);
             else if ("sendMessage" in evt.data) sendMessage({
@@ -27297,7 +27299,7 @@ function App() {
         greeting: greeting
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 49,
+        lineNumber: 50,
         columnNumber: 7
     }, this);
 }
@@ -59032,7 +59034,6 @@ const IFrameComponent = ({ children, title, ...props })=>{
     _s();
     const [contentRef, setContentRef] = (0, _react.useState)(null);
     const mountNode = contentRef?.contentWindow?.document?.body;
-    // debugger;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
         title: title,
         ...props,
@@ -59040,7 +59041,7 @@ const IFrameComponent = ({ children, title, ...props })=>{
         children: mountNode && /*#__PURE__*/ (0, _reactDom.createPortal)(children, mountNode)
     }, void 0, false, {
         fileName: "src/iframe.js",
-        lineNumber: 15,
+        lineNumber: 14,
         columnNumber: 5
     }, undefined);
 };
@@ -59070,26 +59071,33 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
 const WrapperComponent = ({ children, ...props })=>{
     _s();
+    const [isMinimised, setIsMinimised] = (0, _react.useState)(false);
+    let className = "chat-wrapper";
     (0, _react.useEffect)(()=>{
         const handler = (event)=>{
             // debugger;
             const data = event.data;
-            console.log("Hello World?", data);
+            debugger;
+            if (data === "hide") setIsMinimised(true);
+            if (isMinimised) {
+                className = "chat-wrapper hidden";
+                console.log("hidden ", data);
+            } else className = "chat-wrapper";
         };
         window.addEventListener("message", handler);
         // clean up
         return ()=>window.removeEventListener("message", handler);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "chat-wrapper",
+        className: className,
         children: children
     }, void 0, false, {
         fileName: "src/wrapper.js",
-        lineNumber: 21,
+        lineNumber: 34,
         columnNumber: 5
     }, undefined);
 };
-_s(WrapperComponent, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s(WrapperComponent, "owhV2MEeEKzFwSYSi66lMDrphXY=");
 _c = WrapperComponent;
 var _c;
 $RefreshReg$(_c, "WrapperComponent");
