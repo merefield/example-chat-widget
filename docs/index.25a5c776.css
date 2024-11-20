@@ -7,31 +7,48 @@ html, body {
 
 .chat-wrapper {
   box-sizing: border-box;
+  -o-transition: width .3s ease-in-out;
+  -o-transition: height .3s ease-in-out;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 400px;
-  height: 647px;
+  height: 607px;
+  transition: height .3s ease-in-out;
   display: block;
   position: absolute;
-  top: 40px;
+  bottom: 80px;
   right: 40px;
 
+  & .cs-button {
+    width: 40px;
+    height: 40px;
+  }
+
   & .chat-frame {
+    -o-transition: width .3s ease-in-out;
+    -o-transition: height .3s ease-in-out;
+    border: none;
     width: 500px;
     height: 100%;
+    transition: height .3s ease-in-out;
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
   }
 
   &.minimised {
+    -o-transition: width .3s ease-in-out;
+    -o-transition: height .3s ease-in-out;
     width: 40px;
     height: 40px;
-    top: 607px;
+    transition: height .3s ease-in-out;
 
     & .chat-frame {
+      -o-transition: width .3s ease-in-out;
+      -o-transition: height .3s ease-in-out;
       width: 40px;
       height: 40px;
+      transition: height .3s ease-in-out;
     }
   }
 }

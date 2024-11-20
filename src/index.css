@@ -7,31 +7,74 @@ html, body {
 
 .chat-wrapper {
   position: absolute;
-  top:40px;
+  bottom:80px;
   right: 40px;
   box-sizing: border-box;
   width: 400px;
-  height: 647px;
+  height: 607px;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: block;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+
+  .cs-button {
+    width: 40px;
+    height: 40px;
+  }
 
   .chat-frame {
     width: 500px;
     height: 100%;
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
+    border: none;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
   }
 
   &.minimised {
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+
     width: 40px;
     height: 40px;
-    top: 607px;
+    /* top: 607px; */
 
     .chat-frame {
       width: 40px;
       height: 40px;
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz-transition: width 0.3s ease-in-out;
+      -o-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+  
+      -webkit-transition: height 0.3s ease-in-out;
+      -moz-transition: height 0.3s ease-in-out;
+      -o-transition: height 0.3s ease-in-out;
+      transition: height 0.3s ease-in-out;
     }
   }
 }
