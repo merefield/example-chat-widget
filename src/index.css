@@ -1,10 +1,3 @@
-html, body {
-  margin:0;
-  padding: 0;
-  width:100%;
-  height:100%;
-}
-
 .chat-wrapper {
   position: absolute;
   bottom:80px;
@@ -25,18 +18,14 @@ html, body {
   -o-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
 
-  .cs-button {
-    width: 40px;
-    height: 40px;
-  }
-
   .chat-frame {
-    width: 500px;
     height: 100%;
+    width: 100%;
     position: absolute;
     right: 0;
     bottom: 0;
     border: none;
+
     -webkit-transition: width 0.3s ease-in-out;
     -moz-transition: width 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out;
@@ -61,7 +50,6 @@ html, body {
 
     width: 40px;
     height: 40px;
-    /* top: 607px; */
 
     .chat-frame {
       width: 40px;

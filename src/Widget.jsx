@@ -1,4 +1,4 @@
-import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+// import "chat-ui-kit-styles/docs/default/styles.min.css";
 import { MainContainer, ChatContainer, ConversationHeader, MessageList, Message,
 MessageInput, Button, TypingIndicator } from "chat-ui-kit-react";
 import { useChat } from "./ChatProvider";
@@ -26,6 +26,7 @@ export const Widget = ({remoteName = "", messages = [], typingMessage = "", onSe
             <MessageInput placeholder="Type message here"
                           attachButton={false}
                           onSend={onSend}
+                          className="message-input-overrides"
             />
         </ChatContainer>
     </MainContainer>);
