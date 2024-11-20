@@ -1,5 +1,7 @@
 import {createContext, useContext, useState } from "react";
 import { nanoid } from "nanoid";
+import { StarButton } from "chat-ui-kit-react";
+import { useIsMinimised } from './wrapper';
 
 const ChatContext = createContext();
 
@@ -7,6 +9,7 @@ export const ChatProvider = ({children}) => {
     
     const [messages, setMessages] = useState([]);
     const [typingMessage, setTypingMessage] = useState("");
+    const isMinimised = useIsMinimised();
 
     
     const sendMessage = async (message) => {
@@ -34,12 +37,17 @@ export const ChatProvider = ({children}) => {
         window.parent.postMessage("hide", "*");
     }
 
-    return <ChatContext.Provider value={{
+    const show = () => {
+        window.parent.postMessage("show", "*");
+    }
+
+    return isMinimised === false ? (<ChatContext.Provider value={{
         messages,
         sendMessage,
         typingMessage,
         hide
-    }}>{children}</ChatContext.Provider>
+    }}>{children}</ChatContext.Provider>) :
+        (<div><StarButton onClick={show}></StarButton></div>);
     
 }
 

@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
+
+const MinimisedContext = createContext();
 
 export const WrapperComponent = ({
   children,
@@ -10,12 +12,15 @@ export const WrapperComponent = ({
 
   useEffect(() => {
     const handler = event => {
-      // debugger;
       const data = event.data
-      // debugger;
+
       if (data === "hide") {
         setIsMinimised(true);
       }
+      if (data === "show") {
+        setIsMinimised(false);
+      }
+
       if (isMinimised) {
         // className = "chat-wrapper hidden";
         console.log("hidden ", data)
@@ -31,8 +36,15 @@ export const WrapperComponent = ({
     }, []) 
 
   return (
-    <div className={isMinimised ? 'chat-wrapper hidden' : 'chat-wrapper'}>
-      {children}
-    </div>
+    <MinimisedContext.Provider value={isMinimised}>
+      <div className={isMinimised ? 'chat-wrapper minimised' : 'chat-wrapper'}>
+        {children}
+      </div>
+    </MinimisedContext.Provider>
   )
 }
+
+// Custom Hook for accessing the context
+export const useIsMinimised = () => {
+  return useContext(MinimisedContext);
+};

@@ -20,8 +20,10 @@ function App() {
   useEffect(() => {
 
     const handleMessage = evt => {
+      if (evt.data.includes("message"))  {
+        return;
+      }
       if (evt.data === "hide") {
-        // debugger;
         console.log("hiding, sending message to parent");
         window.top.postMessage(
           JSON.stringify({

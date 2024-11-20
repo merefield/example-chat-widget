@@ -25,6 +25,10 @@ html, body {
   }
 
   &.minimised {
+    width: 40px;
+    height: 40px;
+    top: 607px;
+
     .chat-frame {
       width: 40px;
       height: 40px;

@@ -2949,8 +2949,6 @@ var _chatProvider = require("./ChatProvider");
 var _iframe = require("./iframe");
 var _wrapper = require("./wrapper");
 const root = (0, _clientDefault.default).createRoot(document.getElementById('widget-outlet'));
-// debugger;
-console.log("root", root);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wrapper.WrapperComponent), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iframe.IFrameComponent), {
@@ -2962,34 +2960,34 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).
                     rel: "stylesheet"
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 17,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatProvider.ChatProvider), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 19,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 18,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/index.js",
-            lineNumber: 16,
+            lineNumber: 15,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 15,
+        lineNumber: 14,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 14,
+    lineNumber: 13,
     columnNumber: 3
 }, undefined)); // If you want to start measuring performance in your app, pass a function
  // to log results (for example: reportWebVitals(console.log))
@@ -27273,8 +27271,8 @@ function App() {
     }, []);
     (0, _react.useEffect)(()=>{
         const handleMessage = (evt)=>{
+            if (evt.data.includes("message")) return;
             if (evt.data === "hide") {
-                // debugger;
                 console.log("hiding, sending message to parent");
                 window.top.postMessage(JSON.stringify({
                     error: false,
@@ -27299,7 +27297,7 @@ function App() {
         greeting: greeting
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 50,
+        lineNumber: 52,
         columnNumber: 7
     }, this);
 }
@@ -58218,12 +58216,15 @@ parcelHelpers.export(exports, "useChat", ()=>useChat);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _nanoid = require("nanoid");
+var _chatUiKitReact = require("chat-ui-kit-react");
+var _wrapper = require("./wrapper");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 const ChatContext = /*#__PURE__*/ (0, _react.createContext)();
 const ChatProvider = ({ children })=>{
     _s();
     const [messages, setMessages] = (0, _react.useState)([]);
     const [typingMessage, setTypingMessage] = (0, _react.useState)("");
+    const isMinimised = (0, _wrapper.useIsMinimised)();
     const sendMessage = async (message)=>{
         setMessages(messages.concat(message));
         if (message.direction === "outgoing") {
@@ -58242,7 +58243,10 @@ const ChatProvider = ({ children })=>{
     const hide = ()=>{
         window.parent.postMessage("hide", "*");
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChatContext.Provider, {
+    const show = ()=>{
+        window.parent.postMessage("show", "*");
+    };
+    return isMinimised === false ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ChatContext.Provider, {
         value: {
             messages,
             sendMessage,
@@ -58252,11 +58256,27 @@ const ChatProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "src/ChatProvider.jsx",
-        lineNumber: 37,
-        columnNumber: 12
+        lineNumber: 44,
+        columnNumber: 37
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatUiKitReact.StarButton), {
+            onClick: show
+        }, void 0, false, {
+            fileName: "src/ChatProvider.jsx",
+            lineNumber: 50,
+            columnNumber: 15
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/ChatProvider.jsx",
+        lineNumber: 50,
+        columnNumber: 10
     }, undefined);
 };
-_s(ChatProvider, "gejtjWB3h+3FAALLmxF9XnCWISA=");
+_s(ChatProvider, "JEiPCefAq4foI4tHdlVs3da2sN4=", false, function() {
+    return [
+        (0, _wrapper.useIsMinimised)
+    ];
+});
 _c = ChatProvider;
 const useChat = ()=>{
     _s1();
@@ -58273,7 +58293,7 @@ $RefreshReg$(_c, "ChatProvider");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","nanoid":"7nJpF","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}],"7nJpF":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","nanoid":"7nJpF","chat-ui-kit-react":"5ndbQ","./wrapper":"ewe5z","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}],"7nJpF":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "urlAlphabet", ()=>(0, _indexJs.urlAlphabet));
@@ -58308,7 +58328,70 @@ let nanoid = (size = 21)=>crypto.getRandomValues(new Uint8Array(size)).reduce((i
         return id;
     }, '');
 
-},{"./url-alphabet/index.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"62Vgh":[function(require,module,exports,__globalThis) {
+},{"./url-alphabet/index.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"ewe5z":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2db1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2db1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "WrapperComponent", ()=>WrapperComponent);
+parcelHelpers.export(exports, "useIsMinimised", ()=>useIsMinimised);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
+const MinimisedContext = /*#__PURE__*/ (0, _react.createContext)();
+const WrapperComponent = ({ children, ...props })=>{
+    _s();
+    const [isMinimised, setIsMinimised] = (0, _react.useState)(false);
+    let className = "chat-wrapper";
+    (0, _react.useEffect)(()=>{
+        const handler = (event)=>{
+            const data = event.data;
+            if (data === "hide") setIsMinimised(true);
+            if (data === "show") setIsMinimised(false);
+            if (isMinimised) // className = "chat-wrapper hidden";
+            console.log("hidden ", data);
+        };
+        window.addEventListener("message", handler);
+        // clean up
+        return ()=>window.removeEventListener("message", handler);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MinimisedContext.Provider, {
+        value: isMinimised,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: isMinimised ? 'chat-wrapper minimised' : 'chat-wrapper',
+            children: children
+        }, void 0, false, {
+            fileName: "src/wrapper.js",
+            lineNumber: 40,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/wrapper.js",
+        lineNumber: 39,
+        columnNumber: 5
+    }, undefined);
+};
+_s(WrapperComponent, "owhV2MEeEKzFwSYSi66lMDrphXY=");
+_c = WrapperComponent;
+const useIsMinimised = ()=>{
+    _s1();
+    return (0, _react.useContext)(MinimisedContext);
+};
+_s1(useIsMinimised, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
+var _c;
+$RefreshReg$(_c, "WrapperComponent");
+
+  $parcel$ReactRefreshHelpers$2db1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}],"62Vgh":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 var { version } = require("630b62916b1ae0e7");
@@ -59055,55 +59138,5 @@ $RefreshReg$(_c, "IFrameComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","react-dom":"hKAbJ","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}],"ewe5z":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2db1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2db1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "WrapperComponent", ()=>WrapperComponent);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-const WrapperComponent = ({ children, ...props })=>{
-    _s();
-    const [isMinimised, setIsMinimised] = (0, _react.useState)(false);
-    let className = "chat-wrapper";
-    (0, _react.useEffect)(()=>{
-        const handler = (event)=>{
-            // debugger;
-            const data = event.data;
-            // debugger;
-            if (data === "hide") setIsMinimised(true);
-            if (isMinimised) // className = "chat-wrapper hidden";
-            console.log("hidden ", data);
-        };
-        window.addEventListener("message", handler);
-        // clean up
-        return ()=>window.removeEventListener("message", handler);
-    }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: isMinimised ? 'chat-wrapper hidden' : 'chat-wrapper',
-        children: children
-    }, void 0, false, {
-        fileName: "src/wrapper.js",
-        lineNumber: 34,
-        columnNumber: 5
-    }, undefined);
-};
-_s(WrapperComponent, "owhV2MEeEKzFwSYSi66lMDrphXY=");
-_c = WrapperComponent;
-var _c;
-$RefreshReg$(_c, "WrapperComponent");
-
-  $parcel$ReactRefreshHelpers$2db1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}]},["cGT9o","lBYxo","b9BDZ"], "b9BDZ", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"f4wnQ","react":"b4tPL","react-dom":"hKAbJ","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"62Vgh"}]},["cGT9o","lBYxo","b9BDZ"], "b9BDZ", "parcelRequire94c2")
 
