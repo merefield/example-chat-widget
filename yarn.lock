@@ -1104,11 +1104,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@chatscope/chat-ui-kit-styles@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@chatscope/chat-ui-kit-styles/-/chat-ui-kit-styles-1.4.0.tgz#17ded0439d306f7cd2a81f40a2ef197a6ce6bb7b"
-  integrity sha512-016mBJD3DESw7Nh+lkKcPd22xG92ghA0VpIXIbjQtmXhC7Ve6wRazTy8z1Ahut+Tbv179+JxrftuMngsj/yV8Q==
-
 "@csstools/normalize.css@*":
   version "12.1.1"
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-12.1.1.tgz#f0ad221b7280f3fc814689786fd9ee092776ef8f"
@@ -2908,9 +2903,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "22.9.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.9.0.tgz#b7f16e5c3384788542c72dc3d561a7ceae2c0365"
-  integrity sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==
+  version "22.9.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.9.1.tgz#bdf91c36e0e7ecfb7257b2d75bf1b206b308ca71"
+  integrity sha512-p8Yy/8sw1caA8CdRIQBG5tiLHmxtQKObCijiAa9Ez+d4+PRffM4054xbju0msf+cvhJpnFEeNjxmVT/0ipktrg==
   dependencies:
     undici-types "~6.19.8"
 
@@ -3964,27 +3959,27 @@ char-regex@^1.0.2:
   integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
 
 char-regex@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-2.0.1.tgz#6dafdb25f9d3349914079f010ba8d0e6ff9cd01e"
-  integrity sha512-oSvEeo6ZUD7NepqAat3RqoucZ5SeqLJgOvVIwkafu6IP3V0pO38s/ypdVUmDDK6qIIHNlYHJAKX9E7R7HoKElw==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-2.0.2.tgz#81385bb071af4df774bff8721d0ca15ef29ea0bb"
+  integrity sha512-cbGOjAptfM2LVmWhwRFHEKTPkLwNddVmuqYZQt895yXwAsWsXObCG+YN4DGQ/JBtT4GP1a1lPPdio2z413LmTg==
 
 "chat-ui-kit-react@github:merefield/chat-ui-kit-react":
   version "2.0.5"
-  resolved "https://codeload.github.com/merefield/chat-ui-kit-react/tar.gz/47204d1e6cf2c5cf0f6639036600cec9faeb14d4"
+  resolved "https://codeload.github.com/merefield/chat-ui-kit-react/tar.gz/092c206f5ca9b3fb0151dbbf12b454b7cf0d1517"
   dependencies:
-    "@chatscope/chat-ui-kit-styles" "^1.4.0"
     "@fortawesome/fontawesome-free" "6.6.0"
     "@fortawesome/fontawesome-svg-core" "6.6.0"
     "@fortawesome/free-solid-svg-icons" "6.6.0"
     "@fortawesome/react-fontawesome" "^0.2.2"
     "@rollup/plugin-terser" "^0.4.4"
     "@types/node" "*"
+    chat-ui-kit-styles "github:merefield/chat-ui-kit-styles"
     classnames "^2.5.1"
     prop-types "^15.8.1"
 
 "chat-ui-kit-styles@github:merefield/chat-ui-kit-styles":
   version "1.4.0"
-  resolved "https://codeload.github.com/merefield/chat-ui-kit-styles/tar.gz/13ea1a3d3e2831592222f34fbff6ac8a0e139ccf"
+  resolved "https://codeload.github.com/merefield/chat-ui-kit-styles/tar.gz/081c2b69cb9efe403a78db4165902b47f0129dc2"
 
 check-types@^11.2.3:
   version "11.2.3"

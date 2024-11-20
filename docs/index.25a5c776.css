@@ -1963,6 +1963,8 @@
   border: none;
   border-radius: .7em;
   outline: none;
+  width: 40px;
+  height: 40px;
   margin: .1em .2em;
   padding: .2em .7em;
   font-size: 1em;
