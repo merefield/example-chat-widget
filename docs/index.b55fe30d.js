@@ -2948,8 +2948,8 @@ var _reportWebVitalsDefault = parcelHelpers.interopDefault(_reportWebVitals);
 var _chatProvider = require("./ChatProvider");
 var _iframe = require("./iframe");
 var _wrapper = require("./wrapper");
-debugger;
-const root = (0, _clientDefault.default).createRoot(document.getElementById('app'));
+const root = (0, _clientDefault.default).createRoot(document.getElementById('widget-outlet'));
+console.log("root", root);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wrapper.WrapperComponent), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iframe.IFrameComponent), {
@@ -2961,34 +2961,34 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).
                     rel: "stylesheet"
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 17,
-                    columnNumber: 7
+                    lineNumber: 16,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatProvider.ChatProvider), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 19,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/index.js",
-                    lineNumber: 18,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/index.js",
-            lineNumber: 16,
+            lineNumber: 15,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 15,
+        lineNumber: 14,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 14,
+    lineNumber: 13,
     columnNumber: 3
 }, undefined)); // If you want to start measuring performance in your app, pass a function
  // to log results (for example: reportWebVitals(console.log))
@@ -59032,6 +59032,7 @@ const IFrameComponent = ({ children, title, ...props })=>{
     _s();
     const [contentRef, setContentRef] = (0, _react.useState)(null);
     const mountNode = contentRef?.contentWindow?.document?.body;
+    debugger;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
         title: title,
         ...props,
@@ -59039,7 +59040,7 @@ const IFrameComponent = ({ children, title, ...props })=>{
         children: mountNode && /*#__PURE__*/ (0, _reactDom.createPortal)(children, mountNode)
     }, void 0, false, {
         fileName: "src/iframe.js",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 };
