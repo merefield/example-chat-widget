@@ -1,7 +1,10 @@
 import {createContext, useContext, useState } from "react";
 import { nanoid } from "nanoid";
-import { StarButton } from "chat-ui-kit-react";
+import { Button } from "chat-ui-kit-react";
 import { useIsMinimised } from './wrapper';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCommentDots } from "@fortawesome/free-solid-svg-icons/faCommentDots";
+import './chat-provider.css';
 
 const ChatContext = createContext();
 
@@ -47,7 +50,7 @@ export const ChatProvider = ({children}) => {
         typingMessage,
         hide
     }}>{children}</ChatContext.Provider>) :
-        (<div><StarButton onClick={show}></StarButton></div>);
+        (<div className="button-wrap"><Button icon={<FontAwesomeIcon icon={faCommentDots} />} onClick={show}></Button></div>);
     
 }
 

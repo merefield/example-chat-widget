@@ -26,7 +26,6 @@ export const Widget = ({remoteName = "", messages = [], typingMessage = "", onSe
             <MessageInput placeholder="Type message here"
                           attachButton={false}
                           onSend={onSend}
-                          className="message-input-overrides"
             />
         </ChatContainer>
     </MainContainer>);
