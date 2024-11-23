@@ -41,17 +41,6 @@
       width: 90px;
       height: 90px;
       transition: height .3s ease-in-out;
-
-      & .button-wrap {
-        & button {
-          color: #6eaad8;
-          background-color: #fff;
-          border-radius: 35px;
-          width: 70px;
-          height: 70px;
-          box-shadow: 0 2px 12px #6eaad866;
-        }
-      }
     }
   }
 }
@@ -2277,6 +2266,12 @@
 }
 
 .button-wrap {
-  background-color: brown;
-  font-size: 2em;
+  & button {
+    color: #6eaad8;
+    background-color: #fff;
+    border-radius: 35px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 2px 12px #6eaad866;
+  }
 }
