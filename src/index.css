@@ -6,9 +6,11 @@
   box-sizing: border-box;
   width: 400px;
   height: 607px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border: none;
   border-radius: 5px;
   display: block;
+
   -webkit-transition: width 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out;
   -o-transition: width 0.3s ease-in-out;
@@ -58,7 +60,8 @@
       height: 90px;
       border-radius: 20px;
 
-      border: 1px solid #ccc;
+      /* border: 1px solid #ccc; */
+      border: none;
 
       -webkit-transition: width 0.3s ease-in-out;
       -moz-transition: width 0.3s ease-in-out;

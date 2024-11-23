@@ -9,3 +9,8 @@
     width: 70px;
   }
 }
+
+.cs-main-container {
+  box-shadow: 0 2px 12px rgba(0,0,0,.4);
+  box-shadow: 0 2px 12px rgba(110,170,216,.4);
+}
