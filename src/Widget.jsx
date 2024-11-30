@@ -12,7 +12,7 @@ export const Widget = ({remoteName = "", messages = [], typingMessage = "", onSe
             <ConversationHeader>
                 <ConversationHeader.Content userName={remoteName} />
                 <ConversationHeader.Actions>
-                    <Button onClick={hide}>Hide</Button>
+                    <Button className="toggle" onClick={hide}>Hide</Button>
                 </ConversationHeader.Actions>
             </ConversationHeader>
     
