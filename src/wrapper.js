@@ -7,7 +7,7 @@ export const WrapperComponent = ({
   ...props
 }) => {
 
-  const [isMinimised, setIsMinimised] = useState(false);
+  const [isMinimised, setIsMinimised] = useState(true);
   let className = "chat-wrapper";
 
   useEffect(() => {
