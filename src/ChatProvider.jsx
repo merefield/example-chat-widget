@@ -49,7 +49,7 @@ export const ChatProvider = ({children}) => {
         typingMessage,
         hide
     }}>{children}</ChatContext.Provider>) :
-        (<div className="button-wrap"><Button icon={<FontAwesomeIcon icon={faCommentDots} />} onClick={show}></Button></div>);
+        (<div className="button-wrap"><Button className="toggle" icon={<FontAwesomeIcon icon={faCommentDots} />} onClick={show}></Button></div>);
     
 }
 
