@@ -58357,7 +58357,7 @@ var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 const MinimisedContext = /*#__PURE__*/ (0, _react.createContext)();
 const WrapperComponent = ({ children, ...props })=>{
     _s();
-    const [isMinimised, setIsMinimised] = (0, _react.useState)(false);
+    const [isMinimised, setIsMinimised] = (0, _react.useState)(true);
     let className = "chat-wrapper";
     (0, _react.useEffect)(()=>{
         const handler = (event)=>{
@@ -58387,7 +58387,7 @@ const WrapperComponent = ({ children, ...props })=>{
         columnNumber: 5
     }, undefined);
 };
-_s(WrapperComponent, "owhV2MEeEKzFwSYSi66lMDrphXY=");
+_s(WrapperComponent, "MHSU/rdw6G96sASa+Buv7WY+maM=");
 _c = WrapperComponent;
 const useIsMinimised = ()=>{
     _s1();
