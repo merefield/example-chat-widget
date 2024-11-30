@@ -58264,12 +58264,13 @@ const ChatProvider = ({ children })=>{
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "button-wrap",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatUiKitReact.Button), {
+            className: "toggle",
             icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactFontawesome.FontAwesomeIcon), {
                 icon: (0, _faCommentDots.faCommentDots)
             }, void 0, false, {
                 fileName: "src/ChatProvider.jsx",
                 lineNumber: 52,
-                columnNumber: 53
+                columnNumber: 72
             }, void 0),
             onClick: show
         }, void 0, false, {
