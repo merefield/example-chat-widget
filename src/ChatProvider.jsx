@@ -13,7 +13,6 @@ export const ChatProvider = ({children}) => {
     const [messages, setMessages] = useState([]);
     const [typingMessage, setTypingMessage] = useState("");
     const isMinimised = useIsMinimised();
-
     
     const sendMessage = async (message) => {
 

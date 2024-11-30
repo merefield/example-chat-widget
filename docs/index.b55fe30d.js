@@ -58259,7 +58259,7 @@ const ChatProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "src/ChatProvider.jsx",
-        lineNumber: 47,
+        lineNumber: 46,
         columnNumber: 37
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "button-wrap",
@@ -58268,18 +58268,18 @@ const ChatProvider = ({ children })=>{
                 icon: (0, _faCommentDots.faCommentDots)
             }, void 0, false, {
                 fileName: "src/ChatProvider.jsx",
-                lineNumber: 53,
+                lineNumber: 52,
                 columnNumber: 53
             }, void 0),
             onClick: show
         }, void 0, false, {
             fileName: "src/ChatProvider.jsx",
-            lineNumber: 53,
+            lineNumber: 52,
             columnNumber: 39
         }, undefined)
     }, void 0, false, {
         fileName: "src/ChatProvider.jsx",
-        lineNumber: 53,
+        lineNumber: 52,
         columnNumber: 10
     }, undefined);
 };
