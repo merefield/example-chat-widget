@@ -27420,7 +27420,6 @@ const Widget = ({ remoteName = "", messages = [], typingMessage = "", onSend })=
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatUiKitReact.ConversationHeader).Actions, {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatUiKitReact.Button), {
-                                className: "toggle",
                                 onClick: hide,
                                 children: "Hide"
                             }, void 0, false, {
