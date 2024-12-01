@@ -58,9 +58,9 @@
       height: 90px;
       transition: height .3s ease-in-out;
 
-      & button.toggle {
+      & .cs-button.toggle:hover:not(disabled) {
         opacity: 1;
-        filter: brightness(150%);
+        filter: brightness(125%) grayscale(30%);
       }
     }
   }
