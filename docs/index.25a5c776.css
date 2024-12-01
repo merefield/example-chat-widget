@@ -2014,7 +2014,7 @@
 
 .cs-button.toggle:hover:not(:disabled) {
   opacity: 1;
-  filter: brightness(150%);
+  filter: brightness(125%) grayscale(30%);
 }
 
 .cs-button.cs-button--right > svg[data-icon]:first-child {
