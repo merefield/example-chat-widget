@@ -84,7 +84,7 @@
       -o-transition: height 0.3s ease-in-out;
       transition: height 0.3s ease-in-out;
 
-      .cs-button.toggle:hover:not(disabled) {
+      .cs-button.toggle:hover:not(:disabled) {
         opacity: 1;
         filter: brightness(125%) grayscale(30%);
       }
