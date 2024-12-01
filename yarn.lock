@@ -3979,7 +3979,7 @@ char-regex@^2.0.0:
 
 "chat-ui-kit-styles@github:merefield/chat-ui-kit-styles":
   version "1.4.1"
-  resolved "https://codeload.github.com/merefield/chat-ui-kit-styles/tar.gz/b7dbfb9969fe3aa3967a1343700444b5e8e1f70c"
+  resolved "https://codeload.github.com/merefield/chat-ui-kit-styles/tar.gz/21c1ca9c833740566534115572284365d5c0ecfa"
 
 check-types@^11.2.3:
   version "11.2.3"
