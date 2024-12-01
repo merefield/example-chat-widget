@@ -2017,6 +2017,11 @@
   opacity: .6;
 }
 
+.cs-button.toggle:hover:not(:disabled) {
+  opacity: 1;
+  filter: brightness(150%);
+}
+
 .cs-button.cs-button--right > svg[data-icon]:first-child {
   margin-right: .5em;
 }
